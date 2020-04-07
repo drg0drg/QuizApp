@@ -6,7 +6,7 @@
 
 
 
-// Create sets of Q+A
+// Create sets of Q+A          DONE (on questions.js)
 // These sets are objects with keys and values
 // Designate the correct answer. This will be compared later to the user input
 // These objects form an array of Q/A sets
