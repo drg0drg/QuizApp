@@ -32,8 +32,8 @@ body {
         justify-content: flex-start;
         flex-direction: column;
         border: 1px solid red;
-        height: 95vh;
-        width: 95vw;
+        height: 100vh;
+        width: 100vw;
         padding: 2%;
         /* align-items: flex-start; */
     }
@@ -61,6 +61,7 @@ body {
         flex-direction: column;
         align-items: center;
         height:100%;
+        width: 40vw;
         margin:0px;
         padding:0px;
     }
@@ -91,10 +92,16 @@ body {
 
 
     .q-box-mob{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align:justify;
+        text-align:center;
         font-size: 15px;
         color: purple;
         border:1px solid purple;
-        height: 20%;
+        height: 35%;
+
     }
 
 
@@ -102,15 +109,53 @@ body {
 
 
     .a-box-mob {
-        display:wrap;
-        justify-content: center;
-        flex-direction: column;
+        display:flex;
+        justify-content: space-between;
+        flex-direction: row;
         align-items: center;
         font-size: 30px;
         border: 1px solid green;
-        height:25%;
+        height:15%;
+        padding-left: 10px;
+        padding-right: 10px;
+
     }
 
+
+
+    .a-halfL-mob, 
+    .a-halfR-mob {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+    }
+
+
+
+    .a-halfL1-mob, 
+    .a-halfL2-mob {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+
+
+
+
+    .a-halfR1-mob, 
+    .a-halfR2-mob {
+        display:flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+
+
+    .a-inptR-mob {
+        margin-right:3px;
+    }
 
 
 
@@ -123,31 +168,21 @@ body {
         justify-content:space-around;
         border: 1px solid red;
         height: 12%;
+        margin-bottom: 5%;
     }
-
-
 
 
 
 
 
     .play-mob, 
-    .stop-mob {
-        display:center;
-        justify-content: center;
-        /* flex-direction: column; */
-        align-items: center;
-        justify-content:space-around;
+    .stop-mob,
+    .next-mob,
+    .score-mob {
         height: 100%;
-        width:35%;
-    }
+        width:72px;
 
-/* 
-
-    .a1 {
-        display:inline;
     }
- */
 
 
 }
@@ -160,7 +195,163 @@ body {
 /* ------------------------------------------------------*/
 
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    .container-tab {
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border: 1px solid red;
+        height: 100vh;
+        width: 100vw;
+        padding: 2%;
+        /* align-items: flex-start; */
+    }
+
+
+
+    .tm-sc-box-tab {
+        display:flex;
+        justify-content: center;
+        justify-content:space-around;
+        align-items: flex-start;
+        border: 1px solid blue;
+        margin-bottom: 20px;
+        height:30%;
+    }
+
+
+
+
+    .timer-box-tab,
+    .score-box-tab {
+        border: 1px solid orange;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height:100%;
+        width: 40vw;
+        margin:0px;
+        padding:0px;
+    }
+
+
+
+    .tm-title-tab,
+    .sc-title-tab {
+        font-size: 25px;
+        font-weight: 900;
+        display:flex;
+        justify-content: flex-start;
+        margin:0;
+        padding:0;
+    }
+
+
+
+
+    .tm-val-tab,
+    .sc-val-tab {
+        font-size: 70px;
+        font-weight: 900;
+        margin:0;
+        padding:0;
+    }
+
+
+
+    .q-box-tab {
+        justify-content: center;
+        align-items: center;
+        text-align:justify;
+        text-align:center;
+        font-size: 15px;
+        color: purple;
+        border:1px solid purple;
+        height: 25%;
+    }
+
+
+
+
+
+    .a-box-tab {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        border: 1px solid green;
+        height:25%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+
+    .a-halfL-tab, 
+    .a-halfR-tab {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+        margin-left:15vw;
+        margin-right:15vw;
+    }
+
+
+
+    .a-halfL1-tab, 
+    .a-halfL2-tab {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+
+
+
+
+    .a-halfR1-tab, 
+    .a-halfR2-tab {
+        display:flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+
+
+    .a-inptR-tab {
+        margin-right:3px;
+    }
+
+
+
+
+    .btn-box-tab {
+        display:flex;
+        justify-content: center;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content:space-around;
+        border: 1px solid red;
+        height: 12%;
+        margin-bottom: 5%;
+    }
+
+
+
+
+
+    .play-tab, 
+    .stop-tab,
+    .next-tab,
+    .score-tab {
+        height: 100%;
+        width:120px;
+    }
+}
 
 
 
@@ -168,5 +359,166 @@ body {
 /* ----------------DESKTOP RESPONSIVE ------------------ */
 /* ------------------------------------------------------*/
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+
+    .container-dsk {
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border: 1px solid red;
+        height: 90vh;
+        width: 70vw;
+        padding: 2%;
+        /* align-items: flex-start; */
+    }
+
+
+
+    .tm-sc-box-dsk {
+        display:flex;
+        justify-content: center;
+        justify-content:space-around;
+        align-items: flex-start;
+        border: 1px solid blue;
+        margin-bottom: 20px;
+        padding-left: 10%;
+        padding-right: 10%;
+        height:40%;
+    }
+
+
+
+
+    .timer-box-dsk,
+    .score-box-dsk {
+        border: 1px solid orange;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height:100%;
+        width: 30%;
+        margin:0px;
+        padding:0px;
+    }
+
+
+
+    .tm-title-dsk,
+    .sc-title-dsk {
+        font-size: 25px;
+        font-weight: 900;
+        display:flex;
+        justify-content: flex-start;
+        margin:0;
+        padding:0;
+    }
+
+
+
+
+    .tm-val-dsk,
+    .sc-val-dsk {
+        font-size: 70px;
+        font-weight: 900;
+        margin:0;
+        padding:0;
+    }
+
+
+
+    .q-box-dsk {
+        justify-content: center;
+        align-items: center;
+        text-align:justify;
+        text-align:center;
+        font-size: 15px;
+        color: purple;
+        border:1px solid purple;
+        height: 45%;
+    }
+
+
+
+
+
+    .a-box-dsk {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        border: 1px solid green;
+        height:25%;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
+
+
+    .a-halfL-dsk, 
+    .a-halfR-dsk {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+        margin-left:15vw;
+        margin-right:15vw;
+    }
+
+
+
+    .a-halfL1-dsk, 
+    .a-halfL2-dsk {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+
+
+
+
+    .a-halfR1-dsk, 
+    .a-halfR2-dsk {
+        display:flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+
+
+    .a-inptR-dsk {
+        margin-right:3px;
+    }
+
+
+
+
+    .btn-box-dsk {
+        display:flex;
+        justify-content: center;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content:space-around;
+        border: 1px solid red;
+        height: 30%;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 1%;
+    }
+
+
+
+
+
+    .play-dsk, 
+    .stop-dsk,
+    .next-dsk,
+    .score-dsk {
+        height: 100%;
+        width:120px;
+    }
+
+}
 
