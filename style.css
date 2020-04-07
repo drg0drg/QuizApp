@@ -1,0 +1,172 @@
+/* -------------- */
+/* QUIZ APP STYLE */
+/* -------------- */
+
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: rgb(197, 197, 197);
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------------------------------------------------*/
+/* -----------------MOBILE RESPONSIVE ------------------ */
+/* ------------------------------------------------------*/
+
+
+@media screen and (max-width: 768px) {
+
+    .container-mob {
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border: 1px solid red;
+        height: 95vh;
+        width: 95vw;
+        padding: 2%;
+        /* align-items: flex-start; */
+    }
+
+
+
+    .tm-sc-box-mob {
+        display:flex;
+        justify-content: center;
+        justify-content:space-around;
+        align-items: flex-start;
+        border: 1px solid blue;
+        margin-bottom: 20px;
+        height:30%;
+    }
+
+
+
+
+    .timer-box-mob,
+    .score-box-mob{
+        border: 1px solid orange;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height:100%;
+        margin:0px;
+        padding:0px;
+    }
+
+
+
+    .tm-title-mob,
+    .sc-title-mob {
+        font-size: 15px;
+        font-weight: 900;
+        display:flex;
+        justify-content: flex-start;
+        margin:0;
+        padding:0;
+    }
+
+
+
+
+    .tm-val-mob,
+    .sc-val-mob {
+        font-size: 55px;
+        font-weight: 900;
+        margin:0;
+        padding:0;
+    }
+
+
+
+    .q-box-mob{
+        font-size: 15px;
+        color: purple;
+        border:1px solid purple;
+        height: 20%;
+    }
+
+
+
+
+
+    .a-box-mob {
+        display:wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px;
+        border: 1px solid green;
+        height:25%;
+    }
+
+
+
+
+
+    .btn-box-mob {
+        display:flex;
+        justify-content: center;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content:space-around;
+        border: 1px solid red;
+        height: 12%;
+    }
+
+
+
+
+
+
+
+    .play-mob, 
+    .stop-mob {
+        display:center;
+        justify-content: center;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content:space-around;
+        height: 100%;
+        width:35%;
+    }
+
+/* 
+
+    .a1 {
+        display:inline;
+    }
+ */
+
+
+}
+
+
+
+
+/* ------------------------------------------------------*/
+/* -----------------TABLET RESPONSIVE ------------------ */
+/* ------------------------------------------------------*/
+
+
+@media screen and (min-width: 768px) {}
+
+
+
+/* ------------------------------------------------------*/
+/* ----------------DESKTOP RESPONSIVE ------------------ */
+/* ------------------------------------------------------*/
+
+@media screen and (min-width: 992px) {}
+
