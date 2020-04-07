@@ -12,7 +12,7 @@
 // These objects form an array of Q/A sets
 // Create timer countdown
 // Set the timer at a specific value
-// By an addEventListener, start the timer when <play> button is pressed
+// By an addEventListener, start the timer when <play> button is pressed DONE
 // By an addEventListener, stop the timer when <stop> button is pressed
 // Create a function that runs through the QA array and display each set
 // Add this function in the same addEventListener for the <play> button
@@ -37,6 +37,7 @@ var scoretBtn = document.getElementById("score");
 let timerValShown = 5;
 let scoreValShown = 0;
 var timerInterval;
+var timerVAL;
 
 
 // this is only to be able to display the timerValShown when the page loads
@@ -61,6 +62,16 @@ startBtn.addEventListener("click", function timer(){
         timerValShown--;
     }, 1000);
 });
+
+
+
+
+
+stopBtn.addEventListener("click", function () {
+    console.log("button works but doesn't work")
+    clearInterval(timerVAL);
+});
+
 
 
 
