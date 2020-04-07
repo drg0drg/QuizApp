@@ -138,9 +138,8 @@ body {
         display:flex;
         justify-content: center;
         flex-direction: row;
+        padding:4%;
     }
-
-
 
 
 
@@ -149,6 +148,7 @@ body {
         display:flex;
         justify-content: center;
         flex-direction: row-reverse;
+        padding:5%;
     }
 
 
@@ -170,7 +170,6 @@ body {
         height: 12%;
         margin-bottom: 5%;
     }
-
 
 
 
@@ -355,6 +354,9 @@ body {
 
 
 
+
+
+
 /* ------------------------------------------------------*/
 /* ----------------DESKTOP RESPONSIVE ------------------ */
 /* ------------------------------------------------------*/
@@ -428,6 +430,7 @@ body {
 
 
     .q-box-dsk {
+        display:flex;
         justify-content: center;
         align-items: center;
         text-align:justify;
@@ -437,8 +440,6 @@ body {
         border:1px solid purple;
         height: 45%;
     }
-
-
 
 
 
@@ -507,8 +508,6 @@ body {
         padding-right: 10%;
         margin-bottom: 1%;
     }
-
-
 
 
 
