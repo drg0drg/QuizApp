@@ -10,8 +10,8 @@
 // These sets are objects with keys and values
 // Designate the correct answer. This will be compared later to the user input
 // These objects form an array of Q/A sets
-// Create timer countdown
-// Set the timer at a specific value
+// Create timer countdown  DONE
+// Set the timer at a specific value  DONE
 // By an addEventListener, start the timer when <play> button is pressed DONE
 // By an addEventListener, stop the timer when <stop> button is pressed
 // Create a function that runs through the QA array and display each set
@@ -24,6 +24,51 @@
 
 
 
+
+
+
+// let questions = [
+//     {
+//       question: "Inside which HTML element do we put the JavaScript??",
+//       choice1: "<script>",
+//       choice2: "<javascript>",
+//       choice3: "<js>",
+//       choice4: "<scripting>",
+//       answer: 1
+//     },
+//     {
+//       question:
+//         "What is the correct syntax for referring to an external script called 'xxx.js'?",
+//       choice1: "<script href='xxx.js'>",
+//       choice2: "<script name='xxx.js'>",
+//       choice3: "<script src='xxx.js'>",
+//       choice4: "<script file='xxx.js'>",
+//       answer: 3
+//     },
+//     {
+//       question: " When was C++ created by Bjarne Stroustrup, the Danish computer scientist?",
+//       choice1: "1878",
+//       choice2: "1973",
+//       choice3: "2015",
+//       choice4: "1983",
+//       answer: 4
+//     },
+//     {
+//         question: "What is <addEventListener> in JS ?",
+//         choice1: "a string",
+//         choice2: "a method", 
+//         choice3: "a variable", 
+//         choice4: "un pain au chocolat",
+//         answer: 2
+//     }
+//   ];
+
+
+
+
+
+
+
 // VARIABLES
 
 var timerValEl = document.getElementById("tm-val");
@@ -32,12 +77,22 @@ var startBtn = document.getElementById("play");
 var stopBtn = document.getElementById("stop");
 var nextBtn = document.getElementById("next");
 var scoretBtn = document.getElementById("score");
+var questionEl = document.getElementById("q-box");
+var option1 = document.getElementById("a1");
+var option2 = document.getElementById("a2");
+var option3 = document.getElementById("a3");
+var option4 = document.getElementById("a4");
+// var questionsArr = questions;
+
+
 
 
 let timerValShown = 5;
 let scoreValShown = 0;
 var timerInterval;
 var timerVAL;
+var localQuestion;
+var questionIndex;
 
 
 // this is only to be able to display the timerValShown when the page loads
@@ -61,19 +116,32 @@ startBtn.addEventListener("click", function timer(){
         }
         timerValShown--;
     }, 1000);
+    // loadQuestion();
+
 });
 
 
 
 
 
-stopBtn.addEventListener("click", function () {
-    console.log("button works but doesn't work")
-    clearInterval(timerVAL);
-});
+// stopBtn.addEventListener("click", function () {
+//     console.log("button works but doesn't work")
+//     clearInterval(timerVAL);
+// });
 
 
 
 
 
+// Creating a function that loads the first question
+
+function loadQuestion (questionIndex){
+    document.getElementById("play").disabled = true;
+    var localQuestion = questions[questionIndex];
+    questionEl.textContent = localQuestion.question;
+    option1.textContent = localQuestion.choice1;
+    option2.textContent = localQuestion.choice2;
+    option3.textContent = localQuestion.choice3;
+    option4.textContent = localQuestion.choice4;
+};
 

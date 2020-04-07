@@ -27,7 +27,7 @@ let questions = [
       choice3: "2015",
       choice4: "1983",
       answer: 4
-    }
+    },
     {
         question: "What is <addEventListener> in JS ?",
         choice1: "a string",
