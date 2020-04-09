@@ -29,11 +29,11 @@
 
 let questions = [
     {
-      question: "Inside which HTML element do we put the JavaScript??",
+      question: "Inside which HTML element do we put the JavaScript?",
       choice1: "<script>",
       choice2: "<javascript>",
-      choice3: "<js>",
-      choice4: "<scripting>",
+      choice3: "<head>",
+      choice4: "<section>",
       answer: 1
     },
     {
@@ -78,10 +78,10 @@ var stopBtn = document.getElementById("stop");
 var nextBtn = document.getElementById("next");
 var scoretBtn = document.getElementById("score");
 var questionEl = document.getElementById("q-box");
-var option1 = document.getElementById("a1");
-var option2 = document.getElementById("a2");
-var option3 = document.getElementById("a3");
-var option4 = document.getElementById("a4");
+var option1 = document.getElementById("A1");
+var option2 = document.getElementById("A2");
+var option3 = document.getElementById("A3");
+var option4 = document.getElementById("A4");
 // var questionsArr = questions;
 
 
@@ -92,13 +92,15 @@ let scoreValShown = 0;
 var timerInterval;
 var timerVAL;
 var localQuestion;
-var questionIndex;
+var qIndex;
 
 
 // this is only to be able to display the timerValShown when the page loads
 timerValEl.textContent = timerValShown;
 // this is only to be able to display the scoreValShown when the page loads
 scoreValEl.textContent = scoreValShown;
+
+
 
 
 
@@ -123,7 +125,7 @@ startBtn.addEventListener("click", function timer(){
 
 
 
-
+// Stop button functionality
 // stopBtn.addEventListener("click", function () {
 //     console.log("button works but doesn't work")
 //     clearInterval(timerVAL);
@@ -133,12 +135,12 @@ startBtn.addEventListener("click", function timer(){
 
 
 
-// Creating a function that loads the first question
+// Creating a function that loads the first question when play pressed
 
-function loadQuestion (questionIndex){
-    document.getElementById("play").disabled = true;
-    questionIndex=0;
-    var localQuestion = questions[questionIndex];
+function loadQuestion (qIndex){
+    // document.getElementById("play").disabled = true;
+    qIndex=0;
+    var localQuestion = questions[qIndex];
     questionEl.textContent = localQuestion.question;
     option1.textContent = localQuestion.choice1;
     option2.textContent = localQuestion.choice2;
@@ -146,6 +148,19 @@ function loadQuestion (questionIndex){
     option4.textContent = localQuestion.choice4;
 };
 
+
+
+
+
+
+// function loadQuestion(){
+//     var localQuestion = questions[questionIndex];
+//     var answerPoss = document.getElementsByTagName("label");
+//     for (var i=0; i< answerPoss.length; i++) {
+//         answerPoss[i].textContent = questions[answerPoss[i].id]
+
+//     }
+// }
 
 
 

@@ -6,13 +6,11 @@
 
 *{
     font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
 }
 
 
 body {
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(80, 80, 80);
     margin:0;
     padding:0;
     min-height: 100vh;
@@ -27,51 +25,53 @@ body {
 /* ------------------------------------------------------*/
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .container-mob {
+        background-image: url(assets/images/BaseSmall4.jpg);
+        object-fit: fill;
+        /* object-fit: scale-down; */
         display:flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-direction: column;
         border: 1px solid red;
         height: 100vh;
         width: 100vw;
-        padding: 2%;
+        /* padding: 2%; */
         /* align-items: flex-start; */
     }
 
 
 
-    .tm-sc-box-mob {
+    .tm-box-mob {
         display:flex;
         justify-content: center;
-        justify-content:space-around;
-        align-items: flex-start;
+        align-items: center;
         border: 1px solid blue;
-        margin-bottom: 20px;
-        height:30%;
+        /* margin-bottom: 20px; */
+        height:25%;
     }
 
 
 
 
-    .timer-box-mob,
-    .score-box-mob{
-        border: 1px solid orange;
+    .timer-box-mob {
+        border: 1px solid turquoise;
+        border-radius: 10px;
         display:flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        height:100%;
-        width: 40vw;
+        height:120px;
+        width: 120px;
         margin:0px;
         padding:0px;
+        color: turquoise;
     }
 
 
 
-    .tm-title-mob,
-    .sc-title-mob {
+    .tm-title-mob {
         font-size: 15px;
         font-weight: 900;
         display:flex;
@@ -83,8 +83,7 @@ body {
 
 
 
-    .tm-val-mob,
-    .sc-val-mob {
+    .tm-val-mob {
         font-size: 55px;
         font-weight: 900;
         margin:0;
@@ -99,11 +98,10 @@ body {
         align-items: center;
         text-align:justify;
         text-align:center;
-        font-size: 15px;
+        font-size: 30px;
         color: purple;
         border:1px solid purple;
-        height: 35%;
-
+        height: 20%;
     }
 
 
@@ -112,52 +110,18 @@ body {
 
     .a-box-mob {
         display:flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center;
-        font-size: 20px;
-        border: 1px solid green;
-        height:15%;
-        padding-left: 10px;
-        padding-right: 10px;
-
-    }
-
-
-
-    .a-halfL-mob, 
-    .a-halfR-mob {
-        display:flex;
         justify-content: center;
         flex-direction: column;
-        border: 1px solid black;
+        align-items: center;
+        font-size: 30px;
+        border: 1px solid green;
+        height:35%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 
 
-    .a-halfL1-mob, 
-    .a-halfL2-mob {
-        display:flex;
-        justify-content: center;
-        flex-direction: row;
-        padding:4%;
-    }
-
-
-
-    .a-halfR1-mob, 
-    .a-halfR2-mob {
-        display:flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-        padding:5%;
-    }
-
-
-
-    .a-inptR-mob {
-        margin-right:3px;
-    }
 
 
 
@@ -167,22 +131,20 @@ body {
         justify-content: center;
         /* flex-direction: column; */
         align-items: center;
+        /* margin:0 auto; */
         justify-content:space-around;
         border: 1px solid red;
         height: 12%;
-        margin-bottom: 5%;
+        /* margin-bottom: 8%; */
     }
 
 
 
 
     .play-mob, 
-    .stop-mob,
-    .next-mob,
-    .score-mob {
-        height: 100%;
-        width:72px;
-
+    .next-mob {
+        height: 70px;
+        width: 70px;
     }
 
 
@@ -197,50 +159,63 @@ body {
 
 
 @media screen and (min-width: 768px) {
+    /* @media screen and (max-width: 991px) { */
+
 
     .container-tab {
+        background-image: url(assets/images/BaseMed.jpg);
+        object-fit: fill;
+        background-color: greenyellow;
         display:flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-direction: column;
-        border: 1px solid red;
-        height: 100vh;
-        width: 100vw;
-        padding: 2%;
+        border: 1px solid turquoise;
+        border-radius: 10px;
+        height: 80vh;
+        width: 80vw;
+        /* padding: 2%; */
+        margin: 0;
         /* align-items: flex-start; */
+        
     }
 
 
 
-    .tm-sc-box-tab {
+    .tm-box-tab {
         display:flex;
         justify-content: center;
-        justify-content:space-around;
-        align-items: flex-start;
+        align-items: center;
         border: 1px solid blue;
-        margin-bottom: 20px;
-        height:30%;
+        /* margin-bottom: 20px; */
+        height:25%;
     }
 
 
 
 
-    .timer-box-tab,
-    .score-box-tab {
-        border: 1px solid orange;
+
+
+    .timer-box-tab {
+        border: 1px solid turquoise;
+        border-radius: 10px;
         display:flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        height:100%;
-        width: 40vw;
+        height:170px;
+        width: 170px;
         margin:0px;
         padding:0px;
+        color:turquoise
     }
 
 
 
-    .tm-title-tab,
-    .sc-title-tab {
+
+
+
+
+    .tm-title-tab {
         font-size: 25px;
         font-weight: 900;
         display:flex;
@@ -252,8 +227,11 @@ body {
 
 
 
-    .tm-val-tab,
-    .sc-val-tab {
+
+
+
+
+    .tm-val-tab {
         font-size: 70px;
         font-weight: 900;
         margin:0;
@@ -262,16 +240,27 @@ body {
 
 
 
+
+
+
+
+
     .q-box-tab {
+        display:flex;
         justify-content: center;
         align-items: center;
-        text-align:justify;
+        /* text-align:justify; */
         text-align:center;
-        font-size: 15px;
+        font-size: 70px;
         color: purple;
         border:1px solid purple;
-        height: 25%;
+        height: 20%;
     }
+
+
+
+
+
 
 
 
@@ -280,52 +269,21 @@ body {
     .a-box-tab {
         display:flex;
         justify-content: center;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        font-size: 30px;
+        font-size: 50px;
         border: 1px solid green;
-        height:25%;
+        height:35%;
         padding-left: 10px;
         padding-right: 10px;
     }
 
 
 
-    .a-halfL-tab, 
-    .a-halfR-tab {
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-        border: 1px solid black;
-        margin-left:15vw;
-        margin-right:15vw;
-    }
-
-
-
-    .a-halfL1-tab, 
-    .a-halfL2-tab {
-        display:flex;
-        justify-content: center;
-        flex-direction: row;
-    }
 
 
 
 
-
-    .a-halfR1-tab, 
-    .a-halfR2-tab {
-        display:flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-    }
-
-
-
-    .a-inptR-tab {
-        margin-right:3px;
-    }
 
 
 
@@ -338,7 +296,7 @@ body {
         justify-content:space-around;
         border: 1px solid red;
         height: 12%;
-        margin-bottom: 5%;
+        margin-bottom: 0.1%;
     }
 
 
@@ -346,12 +304,16 @@ body {
 
 
     .play-tab, 
-    .stop-tab,
-    .next-tab,
-    .score-tab {
-        height: 100%;
-        width:120px;
+    .next-tab {
+        height: 70px;
+        width:70px;
     }
+
+
+
+
+
+
 }
 
 
@@ -363,53 +325,72 @@ body {
 /* ----------------DESKTOP RESPONSIVE ------------------ */
 /* ------------------------------------------------------*/
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1025px) {
 
     .container-dsk {
+        background-image: url(assets/images/BaseLarge4.jpg);
+        object-fit: fill;
+
+        background-color: green;
+        /* object-fit: fill; */
         display:flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-direction: column;
         border: 1px solid red;
-        height: 90vh;
+        border-radius: 30px;
+        height: 70vh;
         width: 70vw;
-        padding: 2%;
+        margin:0;
+        /* padding: 2%; */
         /* align-items: flex-start; */
     }
 
 
 
-    .tm-sc-box-dsk {
+
+
+
+
+    .tm-box-dsk {
+        background-color: transparent;
+
         display:flex;
         justify-content: center;
-        justify-content:space-around;
-        align-items: flex-start;
+        align-items: center;
         border: 1px solid blue;
-        margin-bottom: 20px;
-        padding-left: 10%;
-        padding-right: 10%;
-        height:40%;
+        height:25%;
+
+        color: turquoise
     }
 
 
 
 
-    .timer-box-dsk,
-    .score-box-dsk {
+
+
+
+
+    .timer-box-dsk {
         border: 1px solid orange;
+        border-radius: 10px;
         display:flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        height:100%;
-        width: 30%;
+        height:170px;;
+        width: 170px;
         margin:0px;
         padding:0px;
+        color: turquoise;
     }
 
 
 
-    .tm-title-dsk,
-    .sc-title-dsk {
+
+
+
+
+    .tm-title-dsk {
         font-size: 25px;
         font-weight: 900;
         display:flex;
@@ -421,8 +402,11 @@ body {
 
 
 
-    .tm-val-dsk,
-    .sc-val-dsk {
+
+
+
+
+    .tm-val-dsk {
         font-size: 70px;
         font-weight: 900;
         margin:0;
@@ -435,65 +419,39 @@ body {
         display:flex;
         justify-content: center;
         align-items: center;
-        text-align:justify;
+        /* text-align:justify; */
         text-align:center;
-        font-size: 15px;
+        font-size: 70px;
         color: purple;
         border:1px solid purple;
-        height: 45%;
+        height: 20%;
     }
+
+
+
 
 
 
     .a-box-dsk {
         display:flex;
         justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        font-size: 30px;
-        border: 1px solid green;
-        height:25%;
-        padding-left: 30%;
-        padding-right: 30%;
-    }
-
-
-
-    .a-halfL-dsk, 
-    .a-halfR-dsk {
-        display:flex;
-        justify-content: center;
         flex-direction: column;
-        border: 1px solid black;
-        margin-left:15vw;
-        margin-right:15vw;
+        align-items: center;
+        font-size: 50px;
+        border: 1px solid green;
+        height:35%;
+        color: turquoise;
+
+        /* padding-left: 30%;
+        padding-right: 30%; */
     }
 
 
 
-    .a-halfL1-dsk, 
-    .a-halfL2-dsk {
-        display:flex;
-        justify-content: center;
-        flex-direction: row;
-    }
 
 
 
 
-
-    .a-halfR1-dsk, 
-    .a-halfR2-dsk {
-        display:flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-    }
-
-
-
-    .a-inptR-dsk {
-        margin-right:3px;
-    }
 
 
 
@@ -505,20 +463,23 @@ body {
         align-items: center;
         justify-content:space-around;
         border: 1px solid red;
-        height: 30%;
+        height: 15%;
         padding-left: 10%;
         padding-right: 10%;
-        margin-bottom: 1%;
+        margin-bottom: 0.1%;
     }
 
 
 
+
+
+
+
+
     .play-dsk, 
-    .stop-dsk,
-    .next-dsk,
-    .score-dsk {
-        height: 100%;
-        width:120px;
+    .next-dsk {
+        height: 70px;
+        width:70px;
     }
 
 }
