@@ -49,7 +49,8 @@ body {
 
 
 
-    .tm-sc-box-mob {
+    .tm-sc-box-mob,
+    .tm-sc-box-scPg-mob {
         display:flex;
         justify-content: space-around;
         align-items: center;
@@ -62,7 +63,8 @@ body {
 
 
     .timer-box-mob,
-    .score-box-mob {
+    .score-box-mob,
+    .score-box-scPg-mob {
         border: 1px solid turquoise;
         border-radius: 10px;
         display:flex;
@@ -79,7 +81,8 @@ body {
 
 
     .tm-title-mob,
-    .sc-title-mob {
+    .sc-title-mob,
+    .sc-title-scPg-mob {
         font-size: 15px;
         font-weight: 900;
         display:flex;
@@ -92,7 +95,8 @@ body {
 
 
     .tm-val-mob,
-    .sc-val-mob {
+    .sc-val-mob,
+    .sc-val-scPg-mob {
         font-size: 40px;
         font-weight: 900;
         margin:0;
@@ -134,7 +138,9 @@ body {
 
 
 
-    .a-mob {
+    .a-mob, 
+    .saveScoreBtn-mob,
+    .reset-mob {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -144,7 +150,8 @@ body {
         padding: 0.2em;
         font-size: 15px;
         font-weight: 700;
-        color: turquoise
+        color: turquoise;
+        background-color: transparent;
     }
 
 
@@ -165,11 +172,66 @@ body {
 
 
 
-    .play-mob, 
+    .play-mob{
+        height: 70px;
+        width: 70px;
+        background-color: turquoise;
+        border: none;
+        background-image: url(assets/images/play-circle-solid.svg);
+    }
+    
+       
+   
     .next-mob {
         height: 70px;
         width: 70px;
+        background-color: turquoise;
+        border: none;
+        background-image: url(assets/images/chevron-circle-right-solid.svg);
     }
+
+
+
+    .form-scPg-mob {
+        display:flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height:30%;
+        font-size: 20px;
+        /* font-weight: 800; */
+        color: turquoise;
+        /* border: 1px solid green; */
+
+    }
+
+
+
+
+    .input-name-mob {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid turquoise;
+        border-radius: 5px;
+        width: 242px;
+        height: 40px;
+        padding: 0.2em;
+        font-size: 15px;
+        font-weight: 700;
+        color: turquoise;
+        background-color: transparent;
+        margin-bottom: 10px;
+
+    }
+
+
+
+.fas {
+    padding: 5px;
+    width:100%;
+}
+
 
 
 
@@ -354,10 +416,22 @@ body {
 
 
 
-    .play-tab, 
+    .play-tab {
+        height: 70px;
+        width: 70px;
+        background-color: turquoise;
+        border: none;
+        background-image: url(assets/images/play-circle-solid.svg);
+    }
+    
+       
+   
     .next-tab {
         height: 70px;
-        width:70px;
+        width: 70px;
+        background-color: turquoise;
+        border: none;
+        background-image: url(assets/images/chevron-circle-right-solid.svg);
     }
 
 
@@ -385,6 +459,8 @@ body {
 
 @media screen and (min-width: 1025px) {
 
+
+
     .container-dsk {
         background-image: url(assets/images/BaseLarge4.jpg);
         object-fit: fill;
@@ -411,7 +487,7 @@ body {
         justify-content: space-around;
         align-items: center;
         padding: 0 15%;
-        height:25%;
+        /* height:25%; */
         color: turquoise
         /* border: 1px solid blue; */
     }
@@ -446,7 +522,7 @@ body {
     
     
     .tm-title-dsk,
-    .score-title-dsk {
+    .sc-title-dsk {
         font-size: 25px;
         font-weight: 900;
         display:flex;
@@ -532,10 +608,22 @@ body {
     
 
     
-    .play-dsk, 
+    .play-dsk{
+        height: 70px;
+        width: 70px;
+        background-color: turquoise;
+        border: none;
+        background-image: url(assets/images/play-circle-solid.svg);
+    }
+    
+       
+   
     .next-dsk {
         height: 70px;
-        width:70px;
+        width: 70px;
+        background-color: turquoise;
+        border: none;
+        background-image: url(assets/images/chevron-circle-right-solid.svg);
     }
 
 

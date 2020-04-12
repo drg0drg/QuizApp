@@ -6,71 +6,21 @@
 
 
 
-// Create sets of Q+A          DONE (on questions.js)
+// Create sets of Q+A         
 // These sets are objects with keys and values
 // Designate the correct answer. This will be compared later to the user input
 // These objects form an array of Q/A sets
-// Create timer countdown  DONE
-// Set the timer at a specific value  DONE
-// By an addEventListener, start the timer when <play> button is pressed DONE
-// By an addEventListener, stop the timer when <stop> button is pressed
+// Create timer countdown  
+// Set the timer at a specific value  
+// By an addEventListener, start the timer when <play> button is pressed 
 // Create a function that runs through the QA array and display each set
 // Add this function in the same addEventListener for the <play> button
-// Create compare function that compares the user input to the correct answer
+// Create compare loop that compares the user input to the correct answer
 // Inside this function, create if/else loop -> if userIn===correctAnswer than increase score, else decrease time
 // Create function to stop the game
 // Inside this function, create if loop -> if timer=0 || no questions left than stop game
 
 
-// const qArray = [
-// 	{
-// 		question: "What does CSS stand for?",
-// 		answers: [
-// 			{ text1: "Creative Style Sheet", correct: false },
-// 			{ text2: "Sheet", correct: false },
-// 			{ text3: "Cascading Style Sheet", correct: true },
-// 			{ text4: "Consortium of Style Systems", correct: false },
-// 		]
-// 	},
-// 	{
-// 		question:
-//         " When was C++ created by Bjarne Stroustrup, the Danish computer scientist?",
-// 		answers: [
-// 			{ text1: "1878", correct: false },
-// 			{ text2: "1973", correct: false },
-// 			{ text3: "2015", correct: false },
-// 			{ text4: "1983", correct: true },
-// 		],
-// 	},
-// 	{
-// 		question: "What is <addEventListener> in JS ?",
-// 		answers: [
-// 			{ text1: "a string", correct: false },
-// 			{ text2: "a method", correct: true },
-// 			{ text3: "a variable", correct: false },
-// 			{ text4: "un pain au chocolat", correct: false },
-// 		],
-// 	},
-// 	{
-// 		question: "What is JQuery ?",
-// 		answers: [
-// 			{ text1: "CSS", correct: false },
-// 			{ text2: "a method", correct: false },
-// 			{ text3: "a framework", correct: true },
-// 			{ text4: "a question", correct: false },
-// 		],
-//     },
-//     {
-// 		question: "Where was MySQL developed in 1995, before being aquired by Oracle?",
-// 		answers: [
-// 			{ text1: "SUA", correct: false },
-// 			{ text2: "Sweden", correct: true },
-// 			{ text3: "UK", correct: false },
-// 			{ text4: "Hong Kong", correct: false },
-// 		],
-// 	},
-
-// ];
 
 
 
@@ -112,7 +62,7 @@ const qArray = [
     },
     {
 		question: "Where was MySQL developed in 1995, before being acquired by Oracle?",
-			text1: "SUA", 
+			text1: "USA", 
 			text2: "Sweden", 
 			text3: "UK", 
             text4: "Hong Kong", 
@@ -141,6 +91,12 @@ var choice2El = document.getElementById("a2");
 var choice3El = document.getElementById("a3");
 var choice4El = document.getElementById("a4");
 var abox = document.getElementById("a-box");
+var scoresList = document.getElementById("ul-scores-list");
+
+var username = document.getElementById("username");
+var saveScoreBtn = document.getElementById("saveScoreBtn");
+// var finalScore = document.getElementById("finalScore");
+var mostRecentScore = localStorage.getItem("mostRecentScore");
 
 
 
@@ -148,6 +104,7 @@ var abox = document.getElementById("a-box");
 
 let timerValShown = 20;
 let scoreValShown = 0;
+var numberOfScores = 5;
 var timerInterval;
 var timerVAL;
 var localQuestion;
@@ -155,10 +112,10 @@ let shuffleQ;
 let qIndex;
 var clicked;
 var userClicked;
-    // this is only to be able to display the timerValShown when the page loads
-    timerValEl.textContent = timerValShown;
-    // this is only to be able to display the scoreValShown when the page loads
-    scoreValEl.textContent = scoreValShown;
+// this is only to be able to display the timerValShown when the page loads
+timerValEl.textContent = timerValShown;
+// this is only to be able to display the scoreValShown when the page loads
+scoreValEl.textContent = scoreValShown;
 
 
 // when the app loads, 
@@ -168,6 +125,12 @@ var userClicked;
 //     scoreValShown.textContent = score;
 //     // timerValEl.textContent = timerValShown;
 // })
+
+
+
+// ------------------------------------
+// ------------Game section------------
+// ------------------------------------
 
 
 
@@ -251,7 +214,7 @@ function loadQ(){
 
 
 
-// Listener on button clicked by user. Takes the user input and stores it into <userClicked> variable. 
+// Listener on button clicked by user. Takes the user input and stores it into <userClicked> local variable. 
 // Uses this variable to compare with the <correctAnswer>
 abox.addEventListener("click", function(e){
     
@@ -261,11 +224,17 @@ abox.addEventListener("click", function(e){
         console.log("user has clicked   " + userClicked);
         console.log("score before check   " + scoreValShown);
 
-        // since the userClicked is local, the check answer loop ust be here:
+        // since the userClicked is local, the check answer loop must be here:
         if (userClicked === qArray[qIndex].correctAnswer) {
             scoreValShown += 10; 
             scoreValEl.textContent = scoreValShown
             console.log("score after check is   " + scoreValShown);
+            } else {
+                timerValShown -= 5;
+                if (timerValShown - 5 < 0){
+                    timerValShown = 0;
+                    timerValEl.textContent = timerValShown;
+                }
             }
             
 })
@@ -280,4 +249,57 @@ abox.addEventListener("click", function(e){
 // next button functionality
 nextBtn.addEventListener("click", function(){
     nextQ();
+
 })
+
+
+
+
+
+
+
+// ------------------------------------
+// ------------Score section-----------
+// ------------------------------------
+
+
+
+
+
+
+// function to create the <scores> list to be locally saved
+function saveScore(e){
+    e.preventDefault();
+    var score = {
+        scoreUserFinal: scoreValShown,
+        nameUserFinal: userName.value
+    };
+    scoresEnd.push(score);
+    scoresEnd.sort( (a,b) => b.score - a.score);
+    scoresEnd.splice(numberOfScores);
+
+    localStorage.setItem('scores-list-scPg', JSON.stringify(scoresEnd));
+    // window.location.assign('/index.html');
+}
+
+
+// add event listener for saveScoreBtn
+
+
+
+// the <scoresList> is an <ul>
+// converting the value(string) from <scores> variable into an array of JS object with JSON.parse
+// storing the <scores> JS object in local storage with localStorage
+const scoresEnd = JSON.parse(localStorage.getItem('scores-list-scPg')) || [];
+
+
+
+
+
+
+// have the <scores> array of objects into a list item
+scoresList.innerHTML =
+	scoresEnd.map( score => {
+			return `<li class="list-score">${score.nameUserFinal}-${score.scoreUserFinal}</li>`;
+})
+.join("");
