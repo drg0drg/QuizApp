@@ -17,3 +17,8 @@ A humble quiz.
 - HTML
 - CSS 
 - JavaScript
+
+
+![Responsive 1](https://user-images.githubusercontent.com/60710786/79074438-4f1e6080-7ce4-11ea-932e-5ba438e2e09f.jpg)
+
+![Responsive 2](https://user-images.githubusercontent.com/60710786/79074445-5f364000-7ce4-11ea-8897-3097ee41cd3c.jpg)
