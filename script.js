@@ -118,13 +118,6 @@ timerValEl.textContent = timerValShown;
 scoreValEl.textContent = scoreValShown;
 
 
-// when the app loads, 
-// window.onload(function(){
-//     // tm-box.classList.remove("hide");
-//     score = 0;
-//     scoreValShown.textContent = score;
-//     // timerValEl.textContent = timerValShown;
-// })
 
 
 
