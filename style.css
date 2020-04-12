@@ -39,13 +39,12 @@ body {
         display:flex;
         justify-content: space-between;
         flex-direction: column;
-        border: 1px solid red;
         height: 100vh;
         width: 100vw;
         padding: 2%;
         margin:0 auto;
         padding:0;
-        /* align-items: flex-start; */
+        /* border: 1px solid red; */
     }
 
 
@@ -54,9 +53,9 @@ body {
         display:flex;
         justify-content: space-around;
         align-items: center;
-        border: 1px solid blue;
         padding: 0 15%;
         height:25%;
+        /* border: 1px solid blue; */
     }
 
 
@@ -106,16 +105,13 @@ body {
         display:flex;
         justify-content: center;
         align-items: center;
-        /* text-align:justify; */
         text-align:center;
         font-size: 20px;
         font-weight: 800;
         color: turquoise;
-        border:1px solid purple;
         padding: 0 10%;
         margin-bottom: 10px;
-        /* height: 10%; */
-        /* padding: 1em; */
+        /* border:1px solid purple; */
     }
 
 
@@ -127,14 +123,12 @@ body {
         justify-content: space-between;
         flex-direction: column;
         align-items: center;
-        border: 1px solid green;
         height:35%;
-        /* padding-left: 10px;
-        padding-right: 10px; */
         padding: 7% 15%;
         font-size: 20px;
         font-weight: 800;
         color: turquoise;
+        /* border: 1px solid green; */
 
     }
 
@@ -146,7 +140,6 @@ body {
         align-items: center;
         border: 1px solid turquoise;
         border-radius: 5px;
-        /* height: 50px; */
         width: 250px;
         padding: 0.2em;
         font-size: 15px;
@@ -163,13 +156,10 @@ body {
     .btn-box-mob {
         display:flex;
         justify-content: center;
-        /* flex-direction: column; */
         align-items: center;
-        /* margin:0 auto; */
         justify-content:space-around;
-        border: 1px solid red;
-        /* height: 12%; */
-        /* margin-bottom: 8%; */
+        margin-bottom: 5%;
+        /* border: 1px solid red; */
     }
 
 
@@ -210,13 +200,11 @@ body {
         display:flex;
         justify-content: space-between;
         flex-direction: column;
-        border: 1px solid turquoise;
+        border: 1px solid transparent;
         border-radius: 10px;
         height: 80vh;
         width: 80vw;
-        /* padding: 2%; */
         margin: 0;
-        /* align-items: flex-start; */
         
     }
 
@@ -226,9 +214,10 @@ body {
         display:flex;
         justify-content: space-around;
         align-items: center;
-        border: 1px solid blue;
         padding: 0 15%;
         height:25%;
+        margin-top:5%;
+        /* border: 1px solid blue; */
     }
 
 
@@ -298,9 +287,9 @@ body {
         font-size: 30px;
         font-weight: 900;
         color: turquoise;
-        border:1px solid purple;
         height: 20%;
         padding: 5% 10%;
+        /* border:1px solid purple; */
 
     }
 
@@ -321,10 +310,10 @@ body {
         font-size: 25px;
         font-weight: 900;
         color: turquoise;
-        border: 1px solid green;
         height:35%;
         padding-left: 10px;
         padding-right: 10px;
+        /* border: 1px solid green; */
     }
 
 
@@ -354,12 +343,11 @@ body {
     .btn-box-tab {
         display:flex;
         justify-content: center;
-        /* flex-direction: column; */
         align-items: center;
         justify-content:space-around;
-        border: 1px solid red;
         height: 12%;
-        margin-bottom: 0.1%;
+        margin-bottom: 5%;
+        /* border: 1px solid red; */
     }
 
 
@@ -401,17 +389,14 @@ body {
         background-image: url(assets/images/BaseLarge4.jpg);
         object-fit: fill;
         background-color: green;
-        /* object-fit: fill; */
         display:flex;
         justify-content: space-between;
         flex-direction: column;
-        border: 1px solid red;
         border-radius: 30px;
         height: 90vh;
         width: 70vw;
         margin:0;
-        /* padding: 2%; */
-        /* align-items: flex-start; */
+        /* border: 1px solid red; */
     }
 
 
@@ -425,10 +410,10 @@ body {
         display:flex;
         justify-content: space-around;
         align-items: center;
-        border: 1px solid blue;
         padding: 0 15%;
         height:25%;
         color: turquoise
+        /* border: 1px solid blue; */
     }
 
 
@@ -441,7 +426,7 @@ body {
     
     .timer-box-dsk,
     .score-box-dsk {
-        border: 1px solid orange;
+        border: 1px solid turquoise;
         border-radius: 10px;
         display:flex;
         justify-content: center;
@@ -491,14 +476,13 @@ body {
         display:flex;
         justify-content: center;
         align-items: center;
-        /* text-align:justify; */
         text-align:center;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 1000;
         color: turquoise;
-        border:1px solid purple;
         padding: 0 10%;
         height: 20%;
+        /* border:1px solid purple; */
     }
     
     
@@ -511,12 +495,13 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 1000;
         height:35%;
         color: turquoise;
         padding-left: 10px;
         padding-right: 10px;
+        padding-bottom: 5%;;
     }
     
 
@@ -531,14 +516,13 @@ body {
     .btn-box-dsk {
         display:flex;
         justify-content: center;
-        /* flex-direction: column; */
         align-items: center;
         justify-content:space-around;
-        border: 1px solid red;
         height: 15%;
         padding-left: 10%;
         padding-right: 10%;
-        margin-bottom: 0.1%;
+        margin-bottom: 2%;
+        /* border: 1px solid red; */
     }
     
     

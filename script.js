@@ -189,6 +189,7 @@ startBtn.addEventListener("click", function timer(){
               timeIsUp();
           }
           timerValShown--;
+        //   scoreValEl = scoreValShown;
       }, 1000);
   
     //   firstQuestion();
@@ -214,6 +215,7 @@ function timeIsUp(){
 // startQuiz function that is called inside startBtn eventListener
 // this startQuiz functions initialize the qIndex = 0 and uses it to call the <setNextQ> function
 function startQuiz (){
+        scoreValShown = 
         qIndex = 0;
         loadQ();
 }
@@ -261,9 +263,11 @@ abox.addEventListener("click", function(e){
 
         // since the userClicked is local, the check answer loop ust be here:
         if (userClicked === qArray[qIndex].correctAnswer) {
-            scoreValShown = scoreValShown +1; 
+            scoreValShown += 10; 
+            scoreValEl.textContent = scoreValShown
             console.log("score after check is   " + scoreValShown);
             }
+            
 })
 
 
