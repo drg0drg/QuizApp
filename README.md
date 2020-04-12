@@ -4,7 +4,7 @@ A humble quiz.
 
 # Rules
 
-    - Four answer questions. Only one answer is correct
+    - Four answers questions. Only one answer is correct
     - Gain 10 points for correct answer
     - Lose 5 seconds for incorrect answer
     - Timer starts at 20 seconds
