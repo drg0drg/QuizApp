@@ -20,6 +20,12 @@ body {
 }
 
 
+/* .hide {
+	display: none;
+} */
+
+
+
 /* ------------------------------------------------------*/
 /* -----------------MOBILE RESPONSIVE ------------------ */
 /* ------------------------------------------------------*/
@@ -29,15 +35,16 @@ body {
 
     .container-mob {
         background-image: url(assets/images/BaseSmall4.jpg);
-        object-fit: fill;
-        /* object-fit: scale-down; */
+        object-fit: cover;
         display:flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-direction: column;
         border: 1px solid red;
         height: 100vh;
         width: 100vw;
-        /* padding: 2%; */
+        padding: 2%;
+        margin:0 auto;
+        padding:0;
         /* align-items: flex-start; */
     }
 
@@ -62,8 +69,8 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        height:120px;
-        width: 120px;
+        height:100px;
+        width: 100px;
         margin:0px;
         padding:0px;
         color: turquoise;
@@ -84,7 +91,7 @@ body {
 
 
     .tm-val-mob {
-        font-size: 55px;
+        font-size: 40px;
         font-weight: 900;
         margin:0;
         padding:0;
@@ -96,12 +103,15 @@ body {
         display:flex;
         justify-content: center;
         align-items: center;
-        text-align:justify;
+        /* text-align:justify; */
         text-align:center;
-        font-size: 30px;
-        color: purple;
+        font-size: 15px;
+        color: white;
+        font-weight: 900;
         border:1px solid purple;
-        height: 20%;
+        margin-bottom: 10px;
+        /* height: 10%; */
+        /* padding: 1em; */
     }
 
 
@@ -110,14 +120,29 @@ body {
 
     .a-box-mob {
         display:flex;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         align-items: center;
-        font-size: 30px;
         border: 1px solid green;
         height:35%;
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+
+
+    .a-mob {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid turquoise;
+        border-radius: 5px;
+        /* height: 50px; */
+        width: 250px;
+        padding: 0.2em;
+        font-size: 15px;
+        font-weight: 700;
+        color: turquoise
     }
 
 
@@ -134,7 +159,7 @@ body {
         /* margin:0 auto; */
         justify-content:space-around;
         border: 1px solid red;
-        height: 12%;
+        /* height: 12%; */
         /* margin-bottom: 8%; */
     }
 
@@ -146,6 +171,13 @@ body {
         height: 70px;
         width: 70px;
     }
+
+
+
+    /* .hide {
+        display: none;
+    } */
+
 
 
 }
@@ -311,6 +343,13 @@ body {
 
 
 
+    /* .hide {
+        display: none;
+    } */
+
+
+
+
 
 
 
@@ -330,7 +369,6 @@ body {
     .container-dsk {
         background-image: url(assets/images/BaseLarge4.jpg);
         object-fit: fill;
-
         background-color: green;
         /* object-fit: fill; */
         display:flex;
@@ -338,7 +376,7 @@ body {
         flex-direction: column;
         border: 1px solid red;
         border-radius: 30px;
-        height: 70vh;
+        height: 90vh;
         width: 70vw;
         margin:0;
         /* padding: 2%; */
@@ -353,23 +391,22 @@ body {
 
     .tm-box-dsk {
         background-color: transparent;
-
         display:flex;
         justify-content: center;
         align-items: center;
         border: 1px solid blue;
         height:25%;
-
         color: turquoise
     }
 
 
 
+    
+    
+    
+    
 
-
-
-
-
+    
     .timer-box-dsk {
         border: 1px solid orange;
         border-radius: 10px;
@@ -377,19 +414,19 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        height:170px;;
-        width: 170px;
+        height:130px;;
+        width: 130px;
         margin:0px;
         padding:0px;
         color: turquoise;
     }
+    
+    
 
-
-
-
-
-
-
+    
+    
+    
+    
     .tm-title-dsk {
         font-size: 25px;
         font-weight: 900;
@@ -398,40 +435,40 @@ body {
         margin:0;
         padding:0;
     }
+    
+    
+    
 
+    
 
-
-
-
-
-
-
+    
+    
     .tm-val-dsk {
-        font-size: 70px;
+        font-size: 50px;
         font-weight: 900;
         margin:0;
         padding:0;
     }
-
-
-
+    
+    
+    
     .q-box-dsk {
         display:flex;
         justify-content: center;
         align-items: center;
         /* text-align:justify; */
         text-align:center;
-        font-size: 70px;
+        font-size: 40px;
         color: purple;
         border:1px solid purple;
         height: 20%;
     }
+    
+    
 
+    
 
-
-
-
-
+    
     .a-box-dsk {
         display:flex;
         justify-content: center;
@@ -441,21 +478,21 @@ body {
         border: 1px solid green;
         height:35%;
         color: turquoise;
-
+        
         /* padding-left: 30%;
         padding-right: 30%; */
     }
+    
+
+    
+    
+    
 
 
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
     .btn-box-dsk {
         display:flex;
         justify-content: center;
@@ -468,19 +505,31 @@ body {
         padding-right: 10%;
         margin-bottom: 0.1%;
     }
+    
+    
+    
+    
+    
+    
 
-
-
-
-
-
-
-
+    
     .play-dsk, 
     .next-dsk {
         height: 70px;
         width:70px;
     }
+
+
+
+
+
+    
+    /* .hide {
+        display: none;
+    } */
+
+
+
 
 }
 

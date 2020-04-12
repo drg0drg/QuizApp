@@ -22,86 +22,151 @@
 // Inside this function, create if loop -> if timer=0 || no questions left than stop game
 
 
+// const qArray = [
+// 	{
+// 		question: "What does CSS stand for?",
+// 		answers: [
+// 			{ text1: "Creative Style Sheet", correct: false },
+// 			{ text2: "Sheet", correct: false },
+// 			{ text3: "Cascading Style Sheet", correct: true },
+// 			{ text4: "Consortium of Style Systems", correct: false },
+// 		]
+// 	},
+// 	{
+// 		question:
+//         " When was C++ created by Bjarne Stroustrup, the Danish computer scientist?",
+// 		answers: [
+// 			{ text1: "1878", correct: false },
+// 			{ text2: "1973", correct: false },
+// 			{ text3: "2015", correct: false },
+// 			{ text4: "1983", correct: true },
+// 		],
+// 	},
+// 	{
+// 		question: "What is <addEventListener> in JS ?",
+// 		answers: [
+// 			{ text1: "a string", correct: false },
+// 			{ text2: "a method", correct: true },
+// 			{ text3: "a variable", correct: false },
+// 			{ text4: "un pain au chocolat", correct: false },
+// 		],
+// 	},
+// 	{
+// 		question: "What is JQuery ?",
+// 		answers: [
+// 			{ text1: "CSS", correct: false },
+// 			{ text2: "a method", correct: false },
+// 			{ text3: "a framework", correct: true },
+// 			{ text4: "a question", correct: false },
+// 		],
+//     },
+//     {
+// 		question: "Where was MySQL developed in 1995, before being aquired by Oracle?",
+// 		answers: [
+// 			{ text1: "SUA", correct: false },
+// 			{ text2: "Sweden", correct: true },
+// 			{ text3: "UK", correct: false },
+// 			{ text4: "Hong Kong", correct: false },
+// 		],
+// 	},
+
+// ];
 
 
 
 
-
-let questions = [
-    {
-      question: "Inside which HTML element do we put the JavaScript?",
-      choice1: "<script>",
-      choice2: "<javascript>",
-      choice3: "<head>",
-      choice4: "<section>",
-      answer: 1
+const qArray = [
+	{
+		question: "What does CSS stand for?",
+		text1: "Creative Style Sheet",
+		text2: "Sheet",
+        text3: "Cascading Style Sheet",
+        text4: "Consortium of Style Systems", 
+		correctAnswer: "Cascading Style Sheet"
+	},
+	{
+		question:
+        " When was C++ created by Bjarne Stroustrup, the Danish computer scientist?",
+		text1: "1878", 
+		text2: "1973", 
+		text3: "2015", 
+        text4: "1983", 
+        correctAnswer: "1983"
+	
+	},
+	{
+		question: "What is <addEventListener> in JS ?",
+			text1: "a string", 
+			text2: "a method", 
+			text3: "a variable", 
+            text4: "un pain au chocolat", 
+            correctAnswer: "a method"
+	},
+	{
+		question: "What is JQuery ?",
+			text1: "CSS",
+			text2: "a method", 
+			text3: "a framework", 
+            text4: "a question", 
+            correctAnswer: "a framework"
     },
     {
-      question:
-        "What is the correct syntax for referring to an external script called 'xxx.js'?",
-      choice1: "<script href='xxx.js'>",
-      choice2: "<script name='xxx.js'>",
-      choice3: "<script src='xxx.js'>",
-      choice4: "<script file='xxx.js'>",
-      answer: 3
-    },
-    {
-      question: " When was C++ created by Bjarne Stroustrup, the Danish computer scientist?",
-      choice1: "1878",
-      choice2: "1973",
-      choice3: "2015",
-      choice4: "1983",
-      answer: 4
-    },
-    {
-        question: "What is <addEventListener> in JS ?",
-        choice1: "a string",
-        choice2: "a method", 
-        choice3: "a variable", 
-        choice4: "un pain au chocolat",
-        answer: 2
-    }
-  ];
+		question: "Where was MySQL developed in 1995, before being aquired by Oracle?",
+			text1: "SUA", 
+			text2: "Sweden", 
+			text3: "UK", 
+            text4: "Hong Kong", 
+            correctAnswer: "Sweden"
+	},
+
+];
 
 
 
 
+
+
+
+
+// VARIABLES - BROUGHT IN FROM HTML
+
+var timerValEl = document.getElementById("tm-val");
+var scoreValEl = document.getElementById("sc-val");
+var startBtn = document.getElementById("play");
+var nextBtn = document.getElementById("next");
+var scoretBtn = document.getElementById("score");
+var questionEl = document.getElementById("q-box");
+var choice1El = document.getElementById("a1");
+var choice2El = document.getElementById("a2");
+var choice3El = document.getElementById("a3");
+var choice4El = document.getElementById("a4");
+var abox = document.getElementById("a-box");
 
 
 
 // VARIABLES
 
-var timerValEl = document.getElementById("tm-val");
-var scoreValEl = document.getElementById("sc-val");
-var startBtn = document.getElementById("play");
-var stopBtn = document.getElementById("stop");
-var nextBtn = document.getElementById("next");
-var scoretBtn = document.getElementById("score");
-var questionEl = document.getElementById("q-box");
-var option1 = document.getElementById("A1");
-var option2 = document.getElementById("A2");
-var option3 = document.getElementById("A3");
-var option4 = document.getElementById("A4");
-// var questionsArr = questions;
-
-
-
-
-let timerValShown = 5;
+let timerValShown = 15;
 let scoreValShown = 0;
 var timerInterval;
 var timerVAL;
 var localQuestion;
-var qIndex;
+let shuffleQ;
+let qIndex;
+var clicked;
+var userClicked;
+    // this is only to be able to display the timerValShown when the page loads
+    timerValEl.textContent = timerValShown;
 
 
-// this is only to be able to display the timerValShown when the page loads
-timerValEl.textContent = timerValShown;
-// this is only to be able to display the scoreValShown when the page loads
-scoreValEl.textContent = scoreValShown;
 
-
-
+// when the app loads, 
+// window.onload(function(){
+//     // tm-box.classList.remove("hide");
+//     score = 0;
+//     scoreValShown.textContent = score;
+//     // timerValEl.textContent = timerValShown;
+// })
 
 
 
@@ -109,82 +174,107 @@ scoreValEl.textContent = scoreValShown;
 // Adding the EventListener to start button to launch timer function
 // Inside EventListener is the function <timer> which uses the method setInterval
 // setInterval method has two parameters, (function, interval). The interval is in milliseconds, hence the second argument is <1000>
+// Also, the play button calls the startQuiz function
 startBtn.addEventListener("click", function timer(){
-    let timerVAL = setInterval(function (){
-        timerValEl.textContent = timerValShown;
-        // timerValShown--    -->>  if this is here, timer stops at 1 instead of 0;
-        if(timerValShown === 0) {
-            clearInterval(timerVAL);
-        }
-        timerValShown--;
-    }, 1000);
-    loadQuestion();
+    // firstQuestion (qIndex)
+    startQuiz();
 
-});
-
-
-
-
-// Stop button functionality
-// stopBtn.addEventListener("click", function () {
-//     console.log("button works but doesn't work")
-//     clearInterval(timerVAL);
-// });
+    // the timer function: 
+      let timerVAL = setInterval(function (){
+          timerValEl.textContent = timerValShown;
+          // timerValShown--    -->>  if this is here, timer stops at 1 instead of 0;
+          if(timerValShown === 0) {
+              clearInterval(timerVAL);
+              timeIsUp();
+          }
+          timerValShown--;
+      }, 1000);
+  
+    //   firstQuestion();
+    // loadQ();
+  
+  });
 
 
 
 
-
-// Creating a function that loads the first question when play pressed
-
-function loadQuestion (qIndex){
-    // document.getElementById("play").disabled = true;
-    qIndex=0;
-    var localQuestion = questions[qIndex];
-    questionEl.textContent = localQuestion.question;
-    option1.textContent = localQuestion.choice1;
-    option2.textContent = localQuestion.choice2;
-    option3.textContent = localQuestion.choice3;
-    option4.textContent = localQuestion.choice4;
-};
+//   Function <timeIsUp> to be called inside the startBtn Listener, if the timerValShown is zero.
+//   This function provides a "time's up!" message in the question box 
+function timeIsUp(){
+    if (timerValShown === 0) {
+        questionEl.textContent = "Time's Up !"
+    }
+}
 
 
+  
 
 
-
-
-// function loadQuestion(){
-//     var localQuestion = questions[questionIndex];
-//     var answerPoss = document.getElementsByTagName("label");
-//     for (var i=0; i< answerPoss.length; i++) {
-//         answerPoss[i].textContent = questions[answerPoss[i].id]
-
-//     }
-// }
+// startQuiz function that is called inside startBtn eventListener
+// this startQuiz functions initialize the qIndex = 0 and uses it to call the <setNextQ> function
+function startQuiz (){
+        qIndex = 0;
+        loadQ();
+}
 
 
 
 
 
-// function loadNextQuestion(){
-//     var userChoice = document.querySelector('input[type=radio]:checked');
-//     if(!userChoice){
-//         alert("Please select answer.");
-//         return;
-//     }
-//     var answer = userChoice.value;
-//     if(questions[currentQuestion].answer === answer){
-//         score += 1;
-//     }
-//     userChoice.checked = false;
-//     currentQuestion++;
-//     if (currentQuestion == totquestions){
-//         startBtn.style.visibility='hidden';
-//         nextBtn.style.visibility='hidden';
-//         quizContainer.style.display="none";
-//         result.style.display="";
-//         result.textContent = score;
-//         return;
-//     }
-//     loadQuestion(currentQuestion);
-// }
+
+// the nextQ function calls the loadQ which takes the shuffled questions array defined in startQuiz function 
+function nextQ(){
+    // loadQ(shuffleQ[qIndex]);
+    qIndex = qIndex +1;
+    loadQ(qIndex);
+    // checkAnswer(qIndex);
+}
+
+
+
+// The loadQ function updates the appropriate divs with the objects' elements
+function loadQ(){
+
+    questionEl.textContent = qArray[qIndex].question;
+    choice1El.textContent = qArray[qIndex].text1;
+    choice2El.textContent = qArray[qIndex].text2;
+    choice3El.textContent = qArray[qIndex].text3;
+    choice4El.textContent = qArray[qIndex].text4;
+
+    // answers[0]
+
+
+    // loop to verify the answer
+    abox.addEventListener("click", function(e){
+        // console.log(scoreValShown);
+        e = e || window.event;
+        var target = e.target || e.srcElement,
+            userClicked = target.textContent || target.innerText;
+            console.log("user has clicked   " + userClicked);
+
+            // console.log("din array" + qArray[qIndex].corrrectAnswer)
+            // console.log("user" + userClicked)
+    })
+    checkAnswer();
+}
+
+
+
+function checkAnswer(){
+    if (userClicked === qArray[qIndex].corrrectAnswer) {
+        scoreValShown = scoreValShown +1; 
+        console.log("score is   " + scoreValShown);
+      }
+
+}
+
+
+
+
+
+
+
+// next button functionality
+nextBtn.addEventListener("click", function(){
+    nextQ();
+})
