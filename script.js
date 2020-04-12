@@ -146,7 +146,7 @@ var abox = document.getElementById("a-box");
 
 // VARIABLES
 
-let timerValShown = 15;
+let timerValShown = 100;
 let scoreValShown = 0;
 var timerInterval;
 var timerVAL;
@@ -241,32 +241,30 @@ function loadQ(){
     choice3El.textContent = qArray[qIndex].text3;
     choice4El.textContent = qArray[qIndex].text4;
 
-    // answers[0]
-
-
-    // loop to verify the answer
-    abox.addEventListener("click", function(e){
-        // console.log(scoreValShown);
-        e = e || window.event;
-        var target = e.target || e.srcElement,
-            userClicked = target.textContent || target.innerText;
-            console.log("user has clicked   " + userClicked);
-
-            // console.log("din array" + qArray[qIndex].corrrectAnswer)
-            // console.log("user" + userClicked)
-    })
-    checkAnswer();
 }
 
 
 
-function checkAnswer(){
-    if (userClicked === qArray[qIndex].corrrectAnswer) {
-        scoreValShown = scoreValShown +1; 
-        console.log("score is   " + scoreValShown);
-      }
 
-}
+
+
+// Listener on button clicked by user. Takes the user input and stores it into <userClicked> variable. 
+// Uses this variable to compare with the <correctAnswer>
+abox.addEventListener("click", function(e){
+    
+    e = e || window.event;
+    var target = e.target || e.srcElement,
+        userClicked = target.textContent || target.innerText;
+        console.log("user has clicked   " + userClicked);
+        console.log("score before check   " + scoreValShown);
+
+        // since the userClicked is local, the check answer loop ust be here:
+        if (userClicked === qArray[qIndex].correctAnswer) {
+            scoreValShown = scoreValShown +1; 
+            console.log("score after check is   " + scoreValShown);
+            }
+})
+
 
 
 
