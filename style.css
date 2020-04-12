@@ -37,7 +37,7 @@ body {
         background-image: url(assets/images/BaseSmall4.jpg);
         object-fit: cover;
         display:flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-direction: column;
         border: 1px solid red;
         height: 100vh;
@@ -50,19 +50,20 @@ body {
 
 
 
-    .tm-box-mob {
+    .tm-sc-box-mob {
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         border: 1px solid blue;
-        /* margin-bottom: 20px; */
+        padding: 0 15%;
         height:25%;
     }
 
 
 
 
-    .timer-box-mob {
+    .timer-box-mob,
+    .score-box-mob {
         border: 1px solid turquoise;
         border-radius: 10px;
         display:flex;
@@ -78,7 +79,8 @@ body {
 
 
 
-    .tm-title-mob {
+    .tm-title-mob,
+    .sc-title-mob {
         font-size: 15px;
         font-weight: 900;
         display:flex;
@@ -90,7 +92,8 @@ body {
 
 
 
-    .tm-val-mob {
+    .tm-val-mob,
+    .sc-val-mob {
         font-size: 40px;
         font-weight: 900;
         margin:0;
@@ -105,10 +108,11 @@ body {
         align-items: center;
         /* text-align:justify; */
         text-align:center;
-        font-size: 15px;
-        color: white;
-        font-weight: 900;
+        font-size: 20px;
+        font-weight: 800;
+        color: turquoise;
         border:1px solid purple;
+        padding: 0 10%;
         margin-bottom: 10px;
         /* height: 10%; */
         /* padding: 1em; */
@@ -125,8 +129,13 @@ body {
         align-items: center;
         border: 1px solid green;
         height:35%;
-        padding-left: 10px;
-        padding-right: 10px;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        padding: 7% 15%;
+        font-size: 20px;
+        font-weight: 800;
+        color: turquoise;
+
     }
 
 
@@ -213,12 +222,12 @@ body {
 
 
 
-    .tm-box-tab {
+    .tm-sc-box-tab {
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         border: 1px solid blue;
-        /* margin-bottom: 20px; */
+        padding: 0 15%;
         height:25%;
     }
 
@@ -227,7 +236,8 @@ body {
 
 
 
-    .timer-box-tab {
+    .timer-box-tab,
+    .score-box-tab {
         border: 1px solid turquoise;
         border-radius: 10px;
         display:flex;
@@ -247,7 +257,8 @@ body {
 
 
 
-    .tm-title-tab {
+    .tm-title-tab,
+    .sc-title-tab {
         font-size: 25px;
         font-weight: 900;
         display:flex;
@@ -263,7 +274,8 @@ body {
 
 
 
-    .tm-val-tab {
+    .tm-val-tab,
+    .sc-val-tab {
         font-size: 70px;
         font-weight: 900;
         margin:0;
@@ -283,10 +295,13 @@ body {
         align-items: center;
         /* text-align:justify; */
         text-align:center;
-        font-size: 70px;
-        color: purple;
+        font-size: 30px;
+        font-weight: 900;
+        color: turquoise;
         border:1px solid purple;
         height: 20%;
+        padding: 5% 10%;
+
     }
 
 
@@ -303,7 +318,9 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        font-size: 50px;
+        font-size: 25px;
+        font-weight: 900;
+        color: turquoise;
         border: 1px solid green;
         height:35%;
         padding-left: 10px;
@@ -313,6 +330,20 @@ body {
 
 
 
+
+
+
+
+    .a-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid turquoise;
+        border-radius: 5px;
+        width: 80%;
+        padding: 0.2em;
+        color: turquoise
+    }
 
 
 
@@ -389,12 +420,13 @@ body {
 
 
 
-    .tm-box-dsk {
+    .tm-sc-box-dsk {
         background-color: transparent;
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         border: 1px solid blue;
+        padding: 0 15%;
         height:25%;
         color: turquoise
     }
@@ -407,7 +439,8 @@ body {
     
 
     
-    .timer-box-dsk {
+    .timer-box-dsk,
+    .score-box-dsk {
         border: 1px solid orange;
         border-radius: 10px;
         display:flex;
@@ -427,7 +460,8 @@ body {
     
     
     
-    .tm-title-dsk {
+    .tm-title-dsk,
+    .score-title-dsk {
         font-size: 25px;
         font-weight: 900;
         display:flex;
@@ -443,7 +477,8 @@ body {
 
     
     
-    .tm-val-dsk {
+    .tm-val-dsk,
+    .sc-val-dsk {
         font-size: 50px;
         font-weight: 900;
         margin:0;
@@ -458,9 +493,11 @@ body {
         align-items: center;
         /* text-align:justify; */
         text-align:center;
-        font-size: 40px;
-        color: purple;
+        font-size: 30px;
+        font-weight: 1000;
+        color: turquoise;
         border:1px solid purple;
+        padding: 0 10%;
         height: 20%;
     }
     
@@ -474,19 +511,17 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        font-size: 50px;
-        border: 1px solid green;
+        font-size: 25px;
+        font-weight: 1000;
         height:35%;
         color: turquoise;
-        
-        /* padding-left: 30%;
-        padding-right: 30%; */
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
 
     
-    
-    
+
 
 
     

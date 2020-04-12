@@ -111,7 +111,7 @@ const qArray = [
             correctAnswer: "a framework"
     },
     {
-		question: "Where was MySQL developed in 1995, before being aquired by Oracle?",
+		question: "Where was MySQL developed in 1995, before being acquired by Oracle?",
 			text1: "SUA", 
 			text2: "Sweden", 
 			text3: "UK", 
@@ -128,7 +128,7 @@ const qArray = [
 
 
 
-// VARIABLES - BROUGHT IN FROM HTML
+// Variables - brought from HTML
 
 var timerValEl = document.getElementById("tm-val");
 var scoreValEl = document.getElementById("sc-val");
@@ -144,9 +144,9 @@ var abox = document.getElementById("a-box");
 
 
 
-// VARIABLES
+// Variables
 
-let timerValShown = 100;
+let timerValShown = 20;
 let scoreValShown = 0;
 var timerInterval;
 var timerVAL;
@@ -157,7 +157,8 @@ var clicked;
 var userClicked;
     // this is only to be able to display the timerValShown when the page loads
     timerValEl.textContent = timerValShown;
-
+    // this is only to be able to display the scoreValShown when the page loads
+    scoreValEl.textContent = scoreValShown;
 
 
 // when the app loads, 
